@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>לוז לייבים - מאי 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&family=Assistant:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink:#E91E63;
+    --pink-soft:#FFE4ED;
+    --black:#0A0A0A;
+    --ink:#1a1a1a;
+    --paper:#FAFAF7;
+    --line:#0A0A0A;
+    --muted:#777;
+
+    /* צבעים לכל קהילה */
+    --c-first:#E91E63;       /* קהילת הצעד הראשון - עדן יחזקאל - פוקסיה */
+    --c-first-soft:#FFE4ED;
+    --c-social-beg:#7C3AED;  /* סושיאל מתחילים - עדן אנגל - סגול */
+    --c-social-beg-soft:#EDE4FF;
+    --c-social-adv:#0EA5A4;  /* סושיאל מתקדמים - דנה סימן טוב - טורקיז */
+    --c-social-adv-soft:#D4F5F4;
+    --c-clients:#F59E0B;     /* סוגרים לקוחות - שיריאל - ענבר */
+    --c-clients-soft:#FFF3D6;
+    --c-ads:#2563EB;         /* קידום ממומן למתחילים - דניאל אלמוג - כחול */
+    --c-ads-soft:#DBE7FF;
+    --c-ads-adv:#0F4C9C;     /* קידום ממומן למתקדמים - כחול כהה */
+    --c-ads-adv-soft:#CDD9EE;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--paper);font-family:'Heebo',sans-serif;color:var(--ink);direction:rtl}
+  body{padding:48px 56px 64px}
+
+  /* Header */
+  .head{
+    max-width:1400px;margin:0 auto 36px;
+    border-bottom:3px solid var(--black);
+    padding-bottom:28px;
+    display:grid;grid-template-columns:1fr auto;align-items:end;gap:24px;
+  }
+  .head .titleblock h1{
+    font-family:'Heebo',sans-serif;
+    font-weight:900;
+    font-size:78px;
+    line-height:.92;
+    letter-spacing:-.02em;
+    color:var(--black);
+  }
+  .head .titleblock h1 .accent{color:var(--pink);display:block}
+  .head .titleblock p{
+    margin-top:16px;
+    font-family:'Assistant',sans-serif;
+    font-weight:600;
+    font-size:18px;
+    color:#333;
+    max-width:640px;
+    line-height:1.45;
+  }
+  .head .meta{
+    text-align:left;
+    border-right:2px solid var(--black);
+    padding-right:24px;
+  }
+  .head .meta .month{
+    font-family:'Heebo',sans-serif;
+    font-weight:900;
+    font-size:64px;
+    line-height:.9;
+    color:var(--pink);
+    letter-spacing:-.03em;
+  }
+  .head .meta .year{
+    font-weight:300;
+    font-size:32px;
+    color:var(--black);
+    letter-spacing:.08em;
+    margin-top:4px;
+  }
+  .head .meta .tag{
+    margin-top:14px;
+    display:inline-block;
+    background:var(--black);
+    color:var(--paper);
+    padding:6px 14px;
+    font-family:'Assistant',sans-serif;
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:.12em;
+  }
+
+  /* Legend */
+  .legend{
+    max-width:1400px;margin:0 auto 18px;
+    display:flex;gap:18px;flex-wrap:wrap;align-items:center;
+    font-family:'Assistant',sans-serif;font-weight:600;font-size:14px;
+  }
+  .legend .lab{display:flex;align-items:center;gap:8px}
+  .legend .sw{width:16px;height:16px;border:2px solid var(--black)}
+  .sw-pink{background:var(--pink)}
+  .sw-soft{background:var(--pink-soft)}
+  .sw-black{background:var(--black)}
+
+  /* מקרא קהילות */
+  .com-legend{
+    max-width:1400px;margin:0 auto 22px;
+    display:flex;flex-wrap:wrap;gap:10px;
+    align-items:stretch;
+  }
+  .com-legend .item{
+    flex:1 1 220px;
+    border:2px solid var(--black);
+    background:var(--paper);
+    padding:10px 12px;
+    position:relative;
+    overflow:hidden;
+  }
+  .com-legend .item::before{
+    content:"";
+    position:absolute;
+    top:0;right:0;bottom:0;
+    width:8px;
+    background:var(--cm);
+  }
+  .com-legend .item .name{
+    font-family:'Heebo',sans-serif;font-weight:900;font-size:15px;
+    color:var(--cm);letter-spacing:-.01em;
+  }
+  .com-legend .item .who{
+    font-family:'Assistant',sans-serif;font-weight:600;font-size:12.5px;
+    color:#444;margin-top:2px;
+  }
+  .com-legend .item .desc{
+    font-family:'Assistant',sans-serif;font-weight:500;font-size:12.5px;
+    color:#555;margin-top:6px;line-height:1.45;
+  }
+
+  .cal{
+    max-width:1400px;margin:0 auto;
+    border:3px solid var(--black);
+    background:var(--paper);
+    overflow:hidden;
+  }
+  .weekdays{
+    display:grid;grid-template-columns:repeat(5,1fr);
+    background:var(--black);
+  }
+  .weekdays div{
+    color:var(--paper);
+    text-align:center;
+    padding:14px 6px;
+    font-family:'Heebo',sans-serif;
+    font-weight:700;
+    font-size:15px;
+    letter-spacing:.18em;
+    border-left:1px solid #333;
+  }
+  .weekdays div:first-child{border-left:none}
+  .weekdays div.weekend{color:var(--pink)}
+
+  .grid{
+    display:grid;grid-template-columns:repeat(5,1fr);
+  }
+  .cell{
+    min-height:150px;
+    border-left:1px solid var(--black);
+    border-top:1px solid var(--black);
+    padding:10px 12px;
+    position:relative;
+    background:var(--paper);
+  }
+  .cell:nth-child(5n){border-left:none}
+  .cell .date{
+    font-family:'Heebo',sans-serif;
+    font-weight:800;
+    font-size:22px;
+    color:var(--black);
+    line-height:1;
+  }
+  .cell.empty{background:repeating-linear-gradient(135deg,#f0f0ec 0 6px,var(--paper) 6px 12px)}
+  .cell.empty .date{color:#bbb;font-weight:400}
+
+  .cell.has-live{
+    background:#fff;
+  }
+  .cell.has-live .date{color:var(--cm,var(--pink))}
+  .cell.has-live::before{
+    content:"";
+    position:absolute;
+    top:0;right:0;
+    width:6px;height:100%;
+    background:var(--cm,var(--pink));
+  }
+
+  .live{
+    margin-top:10px;
+    border:2px solid var(--black);
+    padding:8px 10px 9px;
+    background:var(--cm-soft,var(--pink-soft));
+    position:relative;
+  }
+  .live .time{
+    display:inline-block;
+    background:var(--black);
+    color:var(--paper);
+    font-family:'Heebo',sans-serif;
+    font-weight:800;
+    font-size:11px;
+    padding:2px 8px;
+    letter-spacing:.06em;
+    margin-bottom:6px;
+  }
+  .live .ment{
+    font-family:'Heebo',sans-serif;
+    font-weight:800;
+    font-size:14px;
+    color:var(--black);
+    line-height:1.2;
+    margin-bottom:4px;
+  }
+  .live .topic{
+    font-family:'Assistant',sans-serif;
+    font-weight:500;
+    font-size:12.5px;
+    color:#222;
+    line-height:1.35;
+    margin-top:4px;
+  }
+  .live .topic:first-of-type{margin-top:0}
+  .live .topic b{font-weight:800;color:var(--cm,var(--pink))}
+
+  /* קלאסים לקהילות */
+  .c-first      {--cm:var(--c-first);      --cm-soft:var(--c-first-soft)}
+  .c-social-beg {--cm:var(--c-social-beg); --cm-soft:var(--c-social-beg-soft)}
+  .c-social-adv {--cm:var(--c-social-adv); --cm-soft:var(--c-social-adv-soft)}
+  .c-clients    {--cm:var(--c-clients);    --cm-soft:var(--c-clients-soft)}
+  .c-ads        {--cm:var(--c-ads);        --cm-soft:var(--c-ads-soft)}
+  .c-ads-adv    {--cm:var(--c-ads-adv);    --cm-soft:var(--c-ads-adv-soft)}
+
+  /* Footer */
+  .foot{
+    max-width:1400px;margin:32px auto 0;
+    display:flex;justify-content:space-between;align-items:center;gap:24px;
+    border-top:2px solid var(--black);padding-top:18px;
+    font-family:'Assistant',sans-serif;font-weight:600;font-size:14px;color:#444;
+  }
+  .foot .brand{font-weight:800;color:var(--pink);letter-spacing:.08em}
+  .foot .stripe{
+    flex:1;height:8px;
+    background:linear-gradient(90deg,
+      var(--c-first) 0 16.66%,
+      var(--c-social-beg) 16.66% 33.33%,
+      var(--c-social-adv) 33.33% 50%,
+      var(--c-clients) 50% 66.66%,
+      var(--c-ads) 66.66% 83.33%,
+      var(--c-ads-adv) 83.33% 100%);
+  }
+</style>
+</head>
+<body>
+
+<header class="head">
+  <div class="titleblock">
+    <h1>לוז לייבים<span class="accent">לתלמידים</span></h1>
+    <p>החל מחודש מאי יש לייבים מותאמים לרמה שלכם — תשריינו את הלייב שרלוונטי אליכם:</p>
+  </div>
+  <div class="meta">
+    <div class="month">מאי</div>
+    <div class="year" dir="ltr">2026</div>
+    <div class="tag">LIVE SCHEDULE</div>
+  </div>
+</header>
+
+<div class="com-legend">
+  <div class="item c-first">
+    <div class="name">קהילת הצעד הראשון</div>
+    <div class="desc">למי שרק התחיל את הקורס, נמצא בפרק 1–2 או עצר בצפייה וצריך דחיפה</div>
+  </div>
+  <div class="item c-social-beg">
+    <div class="name">קהילת סושיאל מתחילים</div>
+    <div class="desc">לכל מי שצופה בקורס סושיאל</div>
+  </div>
+  <div class="item c-social-adv">
+    <div class="name">קהילת סושיאל מתקדמים</div>
+    <div class="desc">למי שכבר סיים את הצפייה בקורס המקצועי ועבר לשלב גיוס לקוחות</div>
+  </div>
+  <div class="item c-clients">
+    <div class="name">קהילת סוגרים לקוחות</div>
+    <div class="desc">למי שסיים את החלק המקצועי ורוצה לסגור לקוחות ולהתחיל להתפרנס</div>
+  </div>
+  <div class="item c-ads">
+    <div class="name">קהילת קידום ממומן למתחילים</div>
+    <div class="desc">לכל מי שצופה בקורס ממומן</div>
+  </div>
+  <div class="item c-ads-adv">
+    <div class="name">קהילת קידום ממומן למתקדמים</div>
+    <div class="desc">למי שכבר סיים את הצפייה בקורס ממומן ועבר לשלב גיוס לקוחות</div>
+  </div>
+</div>
+
+
+<section class="cal">
+  <div class="weekdays">
+    <div>ראשון</div>
+    <div>שני</div>
+    <div>שלישי</div>
+    <div>רביעי</div>
+    <div>חמישי</div>
+  </div>
+  <div class="grid">
+
+    <!-- שבוע ראשון: רק 1.5 (שישי) - לא נכלל. הלוח מתחיל מ-3.5 -->
+
+    <!-- שבוע 3-7 במאי -->
+    <div class="cell"><div class="date">3</div></div>
+
+    <div class="cell has-live c-first">
+      <div class="date">4</div>
+      <div class="live">
+        <span class="time">20:30</span>
+        <div class="topic"><b>קהילה:</b> קהילת הצעד הראשון</div>
+        <div class="topic"><b>מעביר הלייב:</b> המנטורית עדן יחזקאל</div>
+        <div class="topic"><b>נושא הלייב:</b> איך להתמיד בצפייה בקורס, ניהול זמן נכון, איך לא להשוות את עצמנו לאחרים ולהשיג את המטרות שלנו</div>
+      </div>
+    </div>
+
+    <div class="cell has-live c-social-adv">
+      <div class="date">5</div>
+      <div class="live">
+        <span class="time">20:00</span>
+        <div class="topic"><b>קהילה:</b> קהילת סושיאל למתקדמים</div>
+        <div class="topic"><b>מעביר הלייב:</b> המנטורית דנה סימן טוב</div>
+        <div class="topic"><b>נושא הלייב:</b> בניית תיק עבודות התחלתי שיביא לכם לקוחות</div>
+      </div>
+    </div>
+
+    <div class="cell has-live c-clients">
+      <div class="date">6</div>
+      <div class="live">
+        <span class="time">20:00</span>
+        <div class="topic"><b>קהילה:</b> קהילת סגירת לקוחות</div>
+        <div class="topic"><b>מעביר הלייב:</b> המנטורית שיריאל תורגמן</div>
+        <div class="topic"><b>נושא הלייב:</b> מרתון גיוס לקוחות — נתחיל תחרות שווה בין התלמידים: מי נמצא בשלב סגירת הלקוחות כולל תרגול ומשימות פרקטיות לביצוע</div>
+      </div>
+    </div>
+
+    <div class="cell"><div class="date">7</div></div>
+
+    <!-- שבוע 10-14 במאי -->
+    <div class="cell has-live c-first">
+      <div class="date">10</div>
+      <div class="live">
+        <span class="time">20:00</span>
+        <div class="topic"><b>קהילה:</b> קהילת הצעד הראשון</div>
+        <div class="topic"><b>מעביר הלייב:</b> המנטורית עדן יחזקאל</div>
+        <div class="topic"><b>נושא הלייב:</b> איך להתמיד בצפייה בקורס, ניהול זמן נכון, איך לא להשוות את עצמנו לאחרים ולהשיג את המטרות שלנו</div>
+      </div>
+    </div>
+
+    <div class="cell has-live c-ads">
+      <div class="date">11</div>
+      <div class="live">
+        <span class="time">20:00</span>
+        <div class="topic"><b>קהילה:</b> קהילת קידום ממומן למתחילים</div>
+        <div class="topic"><b>מעביר הלייב:</b> המנטור דניאל אלמוג</div>
+        <div class="topic"><b>נושא הלייב:</b> תרגול החלק הטכני במממן למתחילים ופתיחת חשבונות פרסום בצורה מקצועית</div>
+      </div>
+    </div>
+
+    <div class="cell has-live c-social-beg">
+      <div class="date">12</div>
+      <div class="live">
+        <span class="time">20:00</span>
+        <div class="topic"><b>קהילה:</b> קהילת סושיאל למתחילים (כל מי שצופה בקורס סושיאל)</div>
+        <div class="topic"><b>מעביר הלייב:</b> המנטורית עדן אנגל</div>
+        <div class="topic"><b>נושא הלייב:</b> תרגול עריכת סרטונים למתחילים — נתרגל עריכת סרטונים בקאפקאט</div>
+      </div>
+    </div>
+
+    <div class="cell"><div class="date">13</div></div>
+    <div class="cell"><div class="date">14</div></div>
+
+  </div>
+</section>
+
+<footer class="foot">
+  <span class="brand">LIVES · MAY 2026</span>
+  <span class="stripe"></span>
+</footer>
+
+</body>
+</html>
